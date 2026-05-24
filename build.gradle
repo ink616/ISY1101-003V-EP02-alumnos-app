@@ -106,16 +106,17 @@ check.dependsOn jacocoTestCoverageVerification
 
 sonar {
     properties {
-        // ProjectKey = {github_owner}_{repo_name} — debe coincidir con SonarCloud
-        property "sonar.projectKey", "mauriciovelasquezduoc_202601_DOY0101-003D_sprintboot_gradle"
-        property "sonar.organization", "mauriciovelasquezduoc"
+        // El ProjectKey suele ser {tu_usuario_github}_{nombre_repositorio}
+        property "sonar.projectKey", "ink616_ISY1101-003V-EP02-alumnos-app"
+        property "sonar.organization", "ink616" // Tu organización de SonarCloud
         property "sonar.host.url", "https://sonarcloud.io"
         property "sonar.coverage.jacoco.xmlReportPaths", "${project.buildDir}/reports/jacoco/test/jacocoTestReport.xml"
+        
         // Excluir directorios que no son código fuente
         property "sonar.exclusions", ".github/**,k8s/**,docs/**"
         property "sonar.sources", "src/main/java"
         property "sonar.tests", "src/test/java"
-        // Rama de referencia para calcular "nuevo código" (Sonar way usa métricas new_*)
+        
         property "sonar.newCode.referenceBranch", "main"
         property "sonar.qualitygate.wait", "false"
         property "sonar.qualitygate.timeout", "300"
