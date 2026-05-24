@@ -108,7 +108,7 @@ sonar {
     properties {
         // El ProjectKey suele ser {tu_usuario_github}_{nombre_repositorio}
         property "sonar.projectKey", "ink616_ISY1101-003V-EP02-alumnos-app"
-        property "sonar.organization", "ink616" // Tu organización de SonarCloud
+        property "sonar.organization", "ink616"
         property "sonar.host.url", "https://sonarcloud.io"
         property "sonar.coverage.jacoco.xmlReportPaths", "${project.buildDir}/reports/jacoco/test/jacocoTestReport.xml"
         
